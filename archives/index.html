@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -296,7 +298,18 @@
 </script>
 <script src="/js/search.js"></script>
 <script src="/js/app.js"></script>
-
+<script>
+        var gitalk = new Gitalk({
+              clientID: 'e7b01d41dae83ed9d254',
+              clientSecret: 'bfa77b991f3025bba9bcee985439c05561381e10',
+              repo: 'avarpow.github.io',
+              owner: 'avarpow',
+              admin: 'avarpow',
+              id: location.pathname,      // Ensure uniqueness and length less than 50{{ page.title }}
+              distractionFreeMode: true  // Facebook-like distraction free mode
+            })
+            gitalk.render('disqus_thread')
+</script>
   <script>setLoadingBarProgress(100);</script>
 </body>
 </html>
