@@ -158,8 +158,6 @@
 	
 		<section class="toc-wrapper"></section>
 	
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
     	<p>在构建hexo博客的过程中，需要用到npm包，与python模块安装后全局可用不同，npm包分为本地包(当前项目可用)，全局包(命令行中直接用)</p>
@@ -185,15 +183,17 @@
 	
 	</section>
 	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script>
         var gitalk = new Gitalk({
-              clientID: '{{ theme.comments.gitalk_clientID }}',
-              clientSecret: '{{ theme.comments.gitalk_Secret }}',
-              repo: '{{ theme.comments.gitalk_repo }}',
-              owner: '{{ theme.comments.gitalk_owner }}',
-              admin: '{{ theme.comments.gitalk_admin }}',
+              clientID: 'e7b01d41dae83ed9d254',
+              clientSecret: 'bfa77b991f3025bba9bcee985439c05561381e10',
+              repo: 'avarpow.github.io',
+              owner: 'avarpow',
+              admin: 'avarpow',
               id: location.pathname,      // Ensure uniqueness and length less than 50{{ page.title }}
-              distractionFreeMode: '{{ theme.comments.distractionFreeMode }}'  // Facebook-like distraction free mode
+              distractionFreeMode: true  // Facebook-like distraction free mode
             })
             gitalk.render('disqus_thread')
     </script>
@@ -341,18 +341,6 @@
 </script>
 <script src="/js/search.js"></script>
 <script src="/js/app.js"></script>
-    <script>
-        var gitalk = new Gitalk({
-              clientID: '{{ theme.comments.gitalk_clientID }}',
-              clientSecret: '{{ theme.comments.gitalk_Secret }}',
-              repo: '{{ theme.comments.gitalk_repo }}',
-              owner: '{{ theme.comments.gitalk_owner }}',
-              admin: '{{ theme.comments.gitalk_admin }}',
-              id: location.pathname,      // Ensure uniqueness and length less than 50{{ page.title }}
-              distractionFreeMode: '{{ theme.comments.distractionFreeMode }}'  // Facebook-like distraction free mode
-            })
-            gitalk.render('disqus_thread')
-    </script>
 
   <script>setLoadingBarProgress(100);</script>
 </body>
