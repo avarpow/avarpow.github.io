@@ -185,25 +185,25 @@
 	
 	</section>
 	
+    <script>
+        var gitalk = new Gitalk({
+              clientID: '{{ theme.comments.gitalk_clientID }}',
+              clientSecret: '{{ theme.comments.gitalk_Secret }}',
+              repo: '{{ theme.comments.gitalk_repo }}',
+              owner: '{{ theme.comments.gitalk_owner }}',
+              admin: '{{ theme.comments.gitalk_admin }}',
+              id: location.pathname,      // Ensure uniqueness and length less than 50{{ page.title }}
+              distractionFreeMode: '{{ theme.comments.distractionFreeMode }}'  // Facebook-like distraction free mode
+            })
+            gitalk.render('disqus_thread')
+    </script>
+   
+	
 		<section id="comments">
 			<div id="disqus_thread"></div>
 		</section>
 	
-	
-    <script>
-        var gitalk = new Gitalk({
-              clientID: '{{ themes.comments.gitalk_clientID }}',
-              clientSecret: '{{ themes.comments.gitalk_Secret }}',
-              repo: '{{ themes.comments.gitalk_repo }}',
-              owner: '{{ themes.comments.gitalk_owner }}',
-              admin: '{{ themes.comments.gitalk_admin }}',
-              id: location.pathname,      // Ensure uniqueness and length less than 50{{ page.title }}
-              distractionFreeMode: '{{ themes.comments.distractionFreeMode }}'  // Facebook-like distraction free mode
-            })
 
-            gitalk.render('disqus_thread')
-    </script>
-  
 
 </article>
 <script>
@@ -307,7 +307,7 @@
   <script>setLoadingBarProgress(80);</script>
   
 <script>
-  var disqus_shortname = 'kevinhome';
+  var disqus_shortname = 'true';
   
   var disqus_url = 'http://keyin.me/2019/07/26/npm安装/';
   
@@ -341,22 +341,19 @@
 </script>
 <script src="/js/search.js"></script>
 <script src="/js/app.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+              clientID: '{{ theme.comments.gitalk_clientID }}',
+              clientSecret: '{{ theme.comments.gitalk_Secret }}',
+              repo: '{{ theme.comments.gitalk_repo }}',
+              owner: '{{ theme.comments.gitalk_owner }}',
+              admin: '{{ theme.comments.gitalk_admin }}',
+              id: location.pathname,      // Ensure uniqueness and length less than 50{{ page.title }}
+              distractionFreeMode: '{{ theme.comments.distractionFreeMode }}'  // Facebook-like distraction free mode
+            })
+            gitalk.render('disqus_thread')
+    </script>
 
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: "e7b01d41dae83ed9d254",
-      clientSecret: "bfa77b991f3025bba9bcee985439c05561381e10",
-      repo: "avarpow.github.io",
-      owner: "avarpow",
-      admin: "avarpow",
-      
-        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
-      
-      distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-    gitalk.render('gitalk-container');
-  </script>
   <script>setLoadingBarProgress(100);</script>
 </body>
 </html>
