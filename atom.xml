@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>World of Forks</title>
+  <title>Avarpow</title>
   
-  <subtitle>Kevin&#39;s Home</subtitle>
+  <subtitle>Avarpow&#39;s Home</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-07-21T17:39:52.554Z</updated>
+  <updated>2019-07-26T16:23:04.618Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
-    <name>Kevin Tan</name>
+    <name>Avarpow</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>npm安装</title>
+    <link href="http://keyin.me/2019/07/26/npm%E5%AE%89%E8%A3%85/"/>
+    <id>http://keyin.me/2019/07/26/npm安装/</id>
+    <published>2019-07-26T12:36:06.000Z</published>
+    <updated>2019-07-26T16:23:04.618Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在构建hexo博客的过程中，需要用到npm包，与python模块安装后全局可用不同，npm包分为本地包(当前项目可用)，全局包(命令行中直接用)&lt;/p&gt;
+&lt;p&gt;##如何安装本地包&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://keyin.me/2019/07/22/hello-world/"/>
     <id>http://keyin.me/2019/07/22/hello-world/</id>
-    <published>2019-07-21T17:42:25.671Z</published>
-    <updated>2019-07-21T17:39:52.554Z</updated>
+    <published>2019-07-22T12:36:06.000Z</published>
+    <updated>2019-07-26T12:43:46.364Z</updated>
     
     <summary type="html">
     
