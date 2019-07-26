@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>添加网页浏览统计工具不蒜子和评论工具gitalk功能的艰难历程</title>
+      <link href="/2019/07/27/%E6%B7%BB%E5%8A%A0gitalk%E5%8A%9F%E8%83%BD%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B/"/>
+      <url>/2019/07/27/%E6%B7%BB%E5%8A%A0gitalk%E5%8A%9F%E8%83%BD%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p>00:26 不蒜子的网页浏览量工具不错 添加一下<br>01:10 还算顺利地完成了<br>01:12 网上冲浪发现给gitalk的评论工具不错<br>02:04 跟着教程走,注册了github application,本地gitalk显示not found,可能推到git上可能就正常了吧<br>02:06 然而并不正常,一个一个翻issue查找解决方法<br>02:30 原来html里面的&lt;% %&gt;还有动态语言替换的功能,应该是这里错了<br>02:54 修改了还是不行,但是authorize打开的url好像有点不对劲<br>03:10 是动态替换没改,改了试一试<br>03:15 还是not found删掉这些东西试一试<br>03:25 为什么删掉了,再generate还存在？<br>03:30 是没有clean保留的缓存文件,clean之后再generate就可了<br>03:36 动态语言的替换加上逻辑判断的过程不懂,去掉逻辑判断<br>03:42 不动态引用了,直接写死,我就不信还不行了<br>03:48 可以了,wtmnb</p><p>总之gitalk装载成功,但是仍然不懂项目中yaml文件中的参数如何引用,逻辑判断到底是否生效,怎么运用动态替换语言</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>npm安装</title>
       <link href="/2019/07/26/npm%E5%AE%89%E8%A3%85/"/>
       <url>/2019/07/26/npm%E5%AE%89%E8%A3%85/</url>

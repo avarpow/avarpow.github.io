@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-07-26T16:23:04.618Z</updated>
+  <updated>2019-07-26T20:17:08.566Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>添加网页浏览统计工具不蒜子和评论工具gitalk功能的艰难历程</title>
+    <link href="http://keyin.me/2019/07/27/%E6%B7%BB%E5%8A%A0gitalk%E5%8A%9F%E8%83%BD%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B/"/>
+    <id>http://keyin.me/2019/07/27/添加gitalk功能艰难历程/</id>
+    <published>2019-07-26T19:58:27.000Z</published>
+    <updated>2019-07-26T20:17:08.566Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;00:26 不蒜子的网页浏览量工具不错 添加一下&lt;br&gt;01:10 还算顺利地完成了&lt;br&gt;01:12 网上冲浪发现给gitalk的评论工具不错&lt;br&gt;02:04 跟着教程走,注册了github application,本地gitalk显示not found,可能推到git
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>npm安装</title>
