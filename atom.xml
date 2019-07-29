@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-07-26T20:19:33.329Z</updated>
+  <updated>2019-07-29T12:56:57.027Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>添加公式失败记</title>
+    <link href="http://keyin.me/2019/07/29/%E6%B7%BB%E5%8A%A0%E5%85%AC%E5%BC%8F%E5%A4%B1%E8%B4%A5%E8%AE%B0/"/>
+    <id>http://keyin.me/2019/07/29/添加公式失败记/</id>
+    <published>2019-07-29T12:48:07.000Z</published>
+    <updated>2019-07-29T12:56:57.027Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;添加支持公式显示，卸载marked渲染器，安装markdown it plus渲染器&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/s
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>添加gitalk的艰难历程</title>
@@ -27,7 +47,10 @@
     
       
       
-        &lt;p&gt;00:26 不蒜子的网页浏览量工具不错 添加一下&lt;br&gt;01:10 还算顺利地完成了&lt;br&gt;01:12 网上冲浪发现给gitalk的评论工具不错&lt;br&gt;02:04 跟着教程走,注册了github application,本地gitalk显示not found,可能推到git
+        &lt;p&gt;00:26 不蒜子的网页浏览量工具不错 添加一下&lt;br&gt;
+01:10 还算顺利地完成了&lt;br&gt;
+01:12 网上冲浪发现给gitalk的评论工具不错&lt;br&gt;
+02:04 跟着教程走,注册了github application,本地gitalk显示not found,可能推到
       
     
     </summary>
@@ -46,9 +69,9 @@
     
       
       
-        &lt;p&gt;在构建hexo博客的过程中，需要用到npm包，与python模块安装后全局可用不同，npm包分为本地包(当前项目可用)，全局包(命令行中直接用)&lt;/p&gt;
-&lt;p&gt;##如何安装本地包&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;
+        &lt;p&gt;在构建hexo博客的过程中，需要用到npm包，与python模块安装后全局可用不同，npm包分为本地包(当前项目可用)，全局包(命令行中直接用)&lt;br&gt;
+##如何安装本地包&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
       
     
     </summary>
