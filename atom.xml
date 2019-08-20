@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-08-02T08:13:04.696Z</updated>
+  <updated>2019-08-20T15:16:01.567Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一次失败的建模</title>
+    <link href="http://keyin.me/2019/08/20/%E4%B8%80%E6%AC%A1%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%BB%BA%E6%A8%A1/"/>
+    <id>http://keyin.me/2019/08/20/一次失败的建模/</id>
+    <published>2019-08-20T15:02:13.000Z</published>
+    <updated>2019-08-20T15:16:01.567Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;尝试解决高中时困扰了很久的三角洲式3d打印机控制方法，结果建模一个小时发现结构设计是错的。。。&lt;/p&gt;
+&lt;img src=&quot;/2019/08/20/一次失败的建模/fail.jpg&quot; title=&quot;fail&quot;&gt;
+&lt;p&gt;（自由度不够了）&lt;/p&gt;
+&lt;p&gt;本着“自己解决不了的东西
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>dp问题</title>
