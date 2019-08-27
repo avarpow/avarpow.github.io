@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-08-20T15:16:01.567Z</updated>
+  <updated>2019-08-27T14:32:08.678Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ip-tunnel技术</title>
+    <link href="http://keyin.me/2019/08/27/ip-tunnel%E6%8A%80%E6%9C%AF/"/>
+    <id>http://keyin.me/2019/08/27/ip-tunnel技术/</id>
+    <published>2019-08-27T14:25:16.000Z</published>
+    <updated>2019-08-27T14:32:08.678Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;穿透内网，连接动态ip，内网ip打洞-----p2p实现原理&lt;br&gt;
+来源：&lt;a href=&quot;https://blog.csdn.net/zhngcho/article/details/82907846&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;htt
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>上课摸鱼</title>
+    <link href="http://keyin.me/2019/08/27/%E4%B8%8A%E8%AF%BE%E6%91%B8%E9%B1%BC/"/>
+    <id>http://keyin.me/2019/08/27/上课摸鱼/</id>
+    <published>2019-08-27T03:41:22.000Z</published>
+    <updated>2019-08-27T14:49:49.723Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;上课被推送了个&lt;a href=&quot;https://github.com/taki0112/UGATIT&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UGATIT&lt;/a&gt;就沉迷其中了23333.&lt;br&gt;
+现在无监督学习和GAN真火      &lt;a href=
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>一次失败的建模</title>

@@ -146,6 +146,93 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2019/07/27/添加gitalk功能艰难历程/">
+        添加gitalk的艰难历程
+      </a>
+    </h2>
+    
+    <time>
+      7月 27, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>00:26 不蒜子的网页浏览量工具不错 添加一下<br>
+01:10 还算顺利地完成了<br>
+01:12 网上冲浪发现给gitalk的评论工具不错<br>
+02:04 跟着教程走,注册了github application,本地gitalk显示not found,可能推到git上可能就正常了吧<br>
+02:06 然而并不正常,一个一个翻issue查找解决方法<br>
+02:30 原来html里面的&lt;% %&gt;还有动态语言替换的功能,应该是这里错了<br>
+02:54 修改了还是不行,但是authorize打开的url好像有点不对劲<br>
+03:10 是动态替换没改,改了试一试<br>
+03:15 还是not found删掉这些东西试一试<br>
+03:25 为什么删掉了,再generate还存在？<br>
+03:30 是没有clean保留的缓存文件,clean之后再generate就可了<br>
+03:36 动态语言的替换加上逻辑判断的过程不懂,去掉逻辑判断<br>
+03:42 不动态引用了,直接写死,我就不信还不行了<br>
+03:48 可以了,wtmnb</p>
+<p>总之gitalk装载成功,但是仍然不懂项目中yaml文件中的参数如何引用,逻辑判断到底是否生效,怎么运用动态替换语言</p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/blog/">blog</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      
+<article class="post reveal">
+
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/07/26/npm安装/">
+        npm安装
+      </a>
+    </h2>
+    
+    <time>
+      7月 26, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>在构建hexo博客的过程中，需要用到npm包，与python模块安装后全局可用不同，npm包分为本地包(当前项目可用)，全局包(命令行中直接用)<br>
+##如何安装本地包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd到需要安装包的目录</span><br><span class="line">执行npm install &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
+<p>##如何安装全局包<br>
+如果你想将其作为一个命令行工具，那么你应该将其安装到全局。这种安装方式后可以让你在任何目录下使用这个包。比如 grunt 就应该以这种方式安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">执行npm install -g &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/nodejs/">nodejs</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      
+<article class="post reveal">
+
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2019/07/22/hello-world/">
         Hello World
       </a>
