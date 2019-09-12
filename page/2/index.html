@@ -146,6 +146,53 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2019/07/29/添加公式失败记/">
+        添加公式失败记
+      </a>
+    </h2>
+    
+    <time>
+      7月 29, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>添加支持公式显示，卸载marked渲染器，安装markdown it plus渲染器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-markdown-it-plus --save</span><br></pre></td></tr></table></figure>
+<p>配置中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">markdown_it_plus:</span><br><span class="line">  highlight: true</span><br><span class="line">  html: true</span><br><span class="line">  xhtmlOut: true</span><br><span class="line">  breaks: true</span><br><span class="line">  langPrefix:</span><br><span class="line">  linkify: true</span><br><span class="line">  typographer:</span><br><span class="line">  quotes: “”‘’</span><br><span class="line">  plugins:</span><br><span class="line">    - plugin:</span><br><span class="line">        name: markdown-it-katex</span><br><span class="line">        enable: true</span><br><span class="line">    - plugin:</span><br><span class="line">        name: markdown-it-mark</span><br><span class="line">        enable: false</span><br></pre></td></tr></table></figure>
+<p>html头部添加css，或模板文件中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href=&quot;https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>完成后渲染测试<br>
+然而实际情况如下</p>
+<img src="/2019/07/29/添加公式失败记/fail.jpg" title="fail">
+<p>对比vscode插件的显示效果</p>
+<img src="/2019/07/29/添加公式失败记/success.jpg" title="success">
+<p>一言难尽…<br>
+暂时还是用截图替代好了<br>
+以后有需求再改用支持mathjax渲染器</p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/blog/">blog</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      
+<article class="post reveal">
+
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2019/07/27/添加gitalk功能艰难历程/">
         添加gitalk的艰难历程
       </a>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-08-27T14:32:08.678Z</updated>
+  <updated>2019-09-12T08:45:20.317Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有服务器啦</title>
+    <link href="http://keyin.me/2019/09/12/%E6%9C%89%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%95%A6/"/>
+    <id>http://keyin.me/2019/09/12/有服务器啦/</id>
+    <published>2019-09-12T08:30:11.000Z</published>
+    <updated>2019-09-12T08:45:20.317Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;捡了台FX8300+HD7770当服务器，我也终于有服务器了&lt;/p&gt;
+&lt;img src=&quot;/2019/09/12/有服务器啦/2.jpg&quot; title=&quot;sever&quot;&gt;
+&lt;p&gt;电费+30 理智+30 肝脏-30&lt;/p&gt;
+&lt;p&gt;顺便在南实验楼测一下速度&lt;/p&gt;
+&lt;img sr
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ip-tunnel技术</title>
