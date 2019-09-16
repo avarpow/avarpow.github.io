@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>服务器修复系统&amp;ftp记</title>
+      <link href="/2019/09/16/repair-ftp-sever/"/>
+      <url>/2019/09/16/repair-ftp-sever/</url>
+      
+        <content type="html"><![CDATA[<p>自闭两小时=一篇博文<br>9月11日感谢hz大佬出给我一台fx8300+hd7770嘿嘿<br>并不熟练地搭建ftp，nginx，和teamviewer。<br>结果正常运行两天后</p><img src="/2019/09/16/repair-ftp-sever/s1.jpg" title="sever"><img src="/2019/09/16/repair-ftp-sever/s2.jpg" title="sever"><img src="/2019/09/16/repair-ftp-sever/s3.jpg" title="sever"><p>多次重启无效，电脑开着开着引导就不见了？？？？<br>接下来长时间重装系统<br>1.装完系统显卡只有DP有输出，HDMI无输出，且OW只有10帧，经排查是显卡驱动没有安装，多方查找驱动，最后还是靠360流氓软件才装好。<br>2.ping不通，关闭公网防火墙后解决<br>3.ftp方面选择 file zilla sever，结果发现长期无法连接服务器控制端。但是已经存在的用户可以正常访问。排查发现ftp zilla服务未开启。</p><img src="/2019/09/16/repair-ftp-sever/4.jpg" title="sever"><p>4.其他电脑但是采用windows文件资源管理提示找不到元素，且无法弹出用户名和密码的登录界面，万能的百度有解决方案</p><img src="/2019/09/16/repair-ftp-sever/5.jpg" title="sever"><img src="/2019/09/16/repair-ftp-sever/6.png" title="sever">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>有服务器啦</title>
       <link href="/2019/09/12/%E6%9C%89%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%95%A6/"/>
       <url>/2019/09/12/%E6%9C%89%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%95%A6/</url>

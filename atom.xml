@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-09-12T08:45:20.317Z</updated>
+  <updated>2019-09-16T12:56:33.544Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>服务器修复系统&amp;ftp记</title>
+    <link href="http://keyin.me/2019/09/16/repair-ftp-sever/"/>
+    <id>http://keyin.me/2019/09/16/repair-ftp-sever/</id>
+    <published>2019-09-16T11:49:13.000Z</published>
+    <updated>2019-09-16T12:56:33.544Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;自闭两小时=一篇博文&lt;br&gt;
+9月11日感谢hz大佬出给我一台fx8300+hd7770嘿嘿&lt;br&gt;
+并不熟练地搭建ftp，nginx，和teamviewer。&lt;br&gt;
+结果正常运行两天后&lt;/p&gt;
+&lt;img src=&quot;/2019/09/16/repair-ftp-sever
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>有服务器啦</title>
