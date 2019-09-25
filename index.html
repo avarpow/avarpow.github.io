@@ -146,6 +146,44 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2019/09/25/strang-code2/">
+        程设写迷惑代码第二周
+      </a>
+    </h2>
+    
+    <time>
+      9月 25, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>第二周又来写迷惑代码啦</p>
+<img src="/2019/09/25/strang-code2/code.png" title="code">
+<p>一行迷惑的不能再迷惑的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int y,m,md=0,temp,flag=0;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;y,&amp;m);</span><br><span class="line">    (y&gt;=0&amp;&amp;y&lt;=9999&amp;&amp;m&gt;=1&amp;&amp;m&lt;=12)?printf(&quot;%04d/%02d has %d days.\n&quot;,y,m,m==2?((y%100==0?(y%400==0?1:0):(y%4==0?1:0))==1?29:28):((m*2-15)&gt;0?(m*2-15):(15-m*2))%4==1?31:30):printf(&quot;Invalid Input Detected.\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="/2019/09/25/strang-code2/code2.jpg" title="code2">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    char c;</span><br><span class="line">    scanf(&quot;%c&quot;, &amp;c);</span><br><span class="line">    printf(&quot;%c\n&quot;, c - &apos;A&apos; + &apos;a&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="/2019/09/25/strang-code2/code3.jpg" title="code3">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int num1, num2;</span><br><span class="line">    scanf(&quot;%d%d&quot;, &amp;num1, &amp;num2);</span><br><span class="line">    printf(&quot;%d\n&quot;,num1%num2==0?num1+num2:num1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="/2019/09/25/strang-code2/code4.jpg" title="code4">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n, flag = 0;</span><br><span class="line">    scanf(&quot;%d&quot;, &amp;n);</span><br><span class="line">    printf(&quot;%d is%s a leap year.\n&quot;, n, (n % 100==0 ? (n % 400==0 ? 1 : 0 ): (n % 4==0 ? 1 : 0)) ? &quot;&quot; : &quot; not&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>啊，你说社么if？不存在的:不存在的;</p>
+
+
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      
+<article class="post reveal">
+
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2019/09/18/程设写迷惑代码第一天/">
         程设写迷惑代码第一天
       </a>
@@ -319,37 +357,6 @@ NAT设备的类型对于TCP穿越NAT,有着十分重要的影响,根据端口映
 <p>（4）让内网主机做服务器</p>
 <p>以上的应用主要在于做p2p软件，如果我们想用家里的电脑，做服务器，是不需要这项技术（“打洞”）的，应为我们可以把路由器设置为net1型，可以直接设置端口映射：</p>
 <p>但还是需要一个外网固定ip的服务器来负责通知其他客服端，因为拨号时得到的ip（这其实也是外网ip，就是其他的计算机可以直接访问你的）每次还是变化的。</p>
-
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      
-<article class="post reveal">
-
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/08/27/上课摸鱼/">
-        上课摸鱼
-      </a>
-    </h2>
-    
-    <time>
-      8月 27, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>上课被推送了个<a href="https://github.com/taki0112/UGATIT" target="_blank" rel="noopener">UGATIT</a>就沉迷其中了23333.<br>
-现在无监督学习和GAN真火      <a href="https://github.com/taki0112/StyleGAN-Tensorflow" target="_blank" rel="noopener">StyleGAN</a>和<a href="https://github.com/taki0112/BigGAN-Tensorflow" target="_blank" rel="noopener">BigGAN</a>都好强<br>
-上课第一天顺便蹭课了数分,计组和Web<br>
-Web老师很强的样子，第一节课就把萌新吓得半死。</p>
 
 
     

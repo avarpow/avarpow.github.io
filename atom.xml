@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-09-18T17:22:51.958Z</updated>
+  <updated>2019-09-25T07:49:50.053Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>程设写迷惑代码第二周</title>
+    <link href="http://keyin.me/2019/09/25/strang-code2/"/>
+    <id>http://keyin.me/2019/09/25/strang-code2/</id>
+    <published>2019-09-25T07:41:30.000Z</published>
+    <updated>2019-09-25T07:49:50.053Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第二周又来写迷惑代码啦&lt;/p&gt;
+&lt;img src=&quot;/2019/09/25/strang-code2/code.png&quot; title=&quot;code&quot;&gt;
+&lt;p&gt;一行迷惑的不能再迷惑的代码&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;t
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>程设写迷惑代码第一天</title>
