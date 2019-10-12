@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-09-25T07:49:50.053Z</updated>
+  <updated>2019-10-12T08:08:53.521Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>web_hw5</title>
+    <link href="http://keyin.me/2019/10/12/web-hw5/"/>
+    <id>http://keyin.me/2019/10/12/web-hw5/</id>
+    <published>2019-10-12T05:15:35.000Z</published>
+    <updated>2019-10-12T08:08:53.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;作业要求&lt;/p&gt;
+&lt;img src=&quot;/2019/10/12/web-hw5/calculator.jpg&quot; title=&quot;code&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/Calculator/&quot;&gt;-&amp;gt;最终效果&amp;lt;-&lt;/a&gt;&lt;br&gt;
+三个小时打完作业，然而出现谜之bug：
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>程设写迷惑代码第二周</title>

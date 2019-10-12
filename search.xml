@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>web_hw5</title>
+      <link href="/2019/10/12/web-hw5/"/>
+      <url>/2019/10/12/web-hw5/</url>
+      
+        <content type="html"><![CDATA[<p>作业要求</p><img src="/2019/10/12/web-hw5/calculator.jpg" title="code"><p><a href="/Calculator/">-&gt;最终效果&lt;-</a><br>三个小时打完作业，然而出现谜之bug：<br>如果在使用键盘enter键得出答案之前采用鼠标点击过按钮，则按enter键后会在运算式中重复输入最后一个字符<br>后发现是焦点问题使用enter相当于触发一次焦点上的按钮。<br>在键盘点击后加入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&apos;equal&apos;).focus();</span><br></pre></td></tr></table></figure><p>在enter时候将焦点设置为equal键上解决</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>程设写迷惑代码第二周</title>
       <link href="/2019/09/25/strang-code2/"/>
       <url>/2019/09/25/strang-code2/</url>
