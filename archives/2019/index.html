@@ -151,6 +151,55 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2019/11/09/4condition/">
+        条件控制的④种写法
+      </a>
+    </h2>
+    
+    <time>
+      11月 9, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>众所周知，茴字有四种写法,C语言中的条件控制比茴字的写法更多一种。<br>
+这里分为三类：普通类，？：运算符，短路类。<br>
+##普通类<br>
+if和switch<br>
+易用性：★★★★<br>
+抽象性：★</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">if(i==5)&#123;</span><br><span class="line">    printf(&quot;if condition\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">switch(i)&#123;</span><br><span class="line">    case 5:printf(&quot;switch condition\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>OUTPUT</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if condition</span><br><span class="line">switch condition</span><br></pre></td></tr></table></figure>
+<p>##?:运算符<br>
+易用性：★★★★★<br>
+抽象性：★★★</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">i==5?printf(&quot;:? condition\n&quot;):1;</span><br></pre></td></tr></table></figure>
+<p>OUTPUT</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:? condition</span><br></pre></td></tr></table></figure>
+<p>##短路类<br>
+易用性：★★★<br>
+抽象性：★★★★★</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">i==5 &amp;&amp; (printf(&quot;&amp;&amp; condition\n&quot;),1);</span><br><span class="line">i==4 || (printf(&quot;|| condition\n&quot;),0);</span><br></pre></td></tr></table></figure>
+<p>OUTPUT</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; condition</span><br><span class="line">|| condition</span><br></pre></td></tr></table></figure>
+<p>抽象程度实属有两个孙笑川</p>
+
+
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      
+<article class="post reveal">
+
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2019/10/12/web-hw5/">
         web_hw5
       </a>
@@ -301,40 +350,6 @@
 <p>4.其他电脑但是采用windows文件资源管理提示找不到元素，且无法弹出用户名和密码的登录界面，万能的百度有解决方案</p>
 <img src="/2019/09/16/repair-ftp-sever/5.jpg" title="sever">
 <img src="/2019/09/16/repair-ftp-sever/6.png" title="sever">
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      
-<article class="post reveal">
-
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/09/12/有服务器啦/">
-        有服务器啦
-      </a>
-    </h2>
-    
-    <time>
-      9月 12, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>捡了台FX8300+HD7770当服务器，我也终于有服务器了</p>
-<img src="/2019/09/12/有服务器啦/2.jpg" title="sever">
-<p>电费+30 理智+30 肝脏-30</p>
-<p>顺便在南实验楼测一下速度</p>
-<img src="/2019/09/12/有服务器啦/1.png" title="speed_test">
-<p>百兆都没有，枯了</p>
-<p>经过推荐用上了Mouse without board 好用，可惜鼠标有点点卡顿，如果做到teamviewer那样就好了</p>
-
 
     
     

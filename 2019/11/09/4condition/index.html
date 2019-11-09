@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>web_hw5 | Avarpow</title>
+  <title>条件控制的④种写法 | Avarpow</title>
   <meta name="description" content="A blog of Avarpow">
   <meta name="keywords" content="blog,stkevintan,IT,Web Front End,Avarpow,kevinsfork">
   <meta name="HandheldFriendly" content="True">
@@ -15,20 +15,18 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="Avarpow">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="作业要求  -&amp;gt;最终效果&amp;lt;- 三个小时打完作业，然而出现谜之bug： 如果在使用键盘enter键得出答案之前采用鼠标点击过按钮，则按enter键后会在运算式中重复输入最后一个字符 后发现是焦点问题使用enter相当于触发一次焦点上的按钮。 在键盘点击后加入 1document.getElementById(&amp;apos;equal&amp;apos;).focus(); 在enter时候将焦点设">
+  <meta name="description" content="众所周知，茴字有四种写法,C语言中的条件控制比茴字的写法更多一种。 这里分为三类：普通类，？：运算符，短路类。 ##普通类 if和switch 易用性：★★★★ 抽象性：★ 1234567int i=5;if(i==5)&amp;#123;    printf(&amp;quot;if condition\n&amp;quot;);&amp;#125;switch(i)&amp;#123;    case 5:printf(&amp;quot;">
 <meta name="keywords" content="blog,stkevintan,IT,Web Front End,Avarpow,kevinsfork">
 <meta property="og:type" content="article">
-<meta property="og:title" content="web_hw5">
-<meta property="og:url" content="http://keyin.me/2019/10/12/web-hw5/index.html">
+<meta property="og:title" content="条件控制的④种写法">
+<meta property="og:url" content="http://keyin.me/2019/11/09/4condition/index.html">
 <meta property="og:site_name" content="Avarpow">
-<meta property="og:description" content="作业要求  -&amp;gt;最终效果&amp;lt;- 三个小时打完作业，然而出现谜之bug： 如果在使用键盘enter键得出答案之前采用鼠标点击过按钮，则按enter键后会在运算式中重复输入最后一个字符 后发现是焦点问题使用enter相当于触发一次焦点上的按钮。 在键盘点击后加入 1document.getElementById(&amp;apos;equal&amp;apos;).focus(); 在enter时候将焦点设">
+<meta property="og:description" content="众所周知，茴字有四种写法,C语言中的条件控制比茴字的写法更多一种。 这里分为三类：普通类，？：运算符，短路类。 ##普通类 if和switch 易用性：★★★★ 抽象性：★ 1234567int i=5;if(i==5)&amp;#123;    printf(&amp;quot;if condition\n&amp;quot;);&amp;#125;switch(i)&amp;#123;    case 5:printf(&amp;quot;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://keyin.me/2019/10/12/web-hw5/calculator.jpg">
-<meta property="og:updated_time" content="2019-10-12T08:08:53.521Z">
+<meta property="og:updated_time" content="2019-11-09T09:13:48.703Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="web_hw5">
-<meta name="twitter:description" content="作业要求  -&amp;gt;最终效果&amp;lt;- 三个小时打完作业，然而出现谜之bug： 如果在使用键盘enter键得出答案之前采用鼠标点击过按钮，则按enter键后会在运算式中重复输入最后一个字符 后发现是焦点问题使用enter相当于触发一次焦点上的按钮。 在键盘点击后加入 1document.getElementById(&amp;apos;equal&amp;apos;).focus(); 在enter时候将焦点设">
-<meta name="twitter:image" content="http://keyin.me/2019/10/12/web-hw5/calculator.jpg">
+<meta name="twitter:title" content="条件控制的④种写法">
+<meta name="twitter:description" content="众所周知，茴字有四种写法,C语言中的条件控制比茴字的写法更多一种。 这里分为三类：普通类，？：运算符，短路类。 ##普通类 if和switch 易用性：★★★★ 抽象性：★ 1234567int i=5;if(i==5)&amp;#123;    printf(&amp;quot;if condition\n&amp;quot;);&amp;#125;switch(i)&amp;#123;    case 5:printf(&amp;quot;">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -139,7 +137,7 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-web-hw5"
+        <article id="post-4condition"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
@@ -147,12 +145,12 @@
 
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2019/10/12/web-hw5/">
-    	web_hw5
+  	<a href="/2019/11/09/4condition/">
+    	条件控制的④种写法
     </a>
   </h2>
 	<time>
-	  10月 12, 2019	
+	  11月 9, 2019	
 	  
         <!-- 不算子 -->
         <span id="busuanzi_container_page_pv" style='display:none' >
@@ -168,15 +166,28 @@
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>作业要求</p>
-<img src="/2019/10/12/web-hw5/calculator.jpg" title="code">
-<p><a href="/Calculator/">-&gt;最终效果&lt;-</a><br>
-三个小时打完作业，然而出现谜之bug：<br>
-如果在使用键盘enter键得出答案之前采用鼠标点击过按钮，则按enter键后会在运算式中重复输入最后一个字符<br>
-后发现是焦点问题使用enter相当于触发一次焦点上的按钮。<br>
-在键盘点击后加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&apos;equal&apos;).focus();</span><br></pre></td></tr></table></figure>
-<p>在enter时候将焦点设置为equal键上解决</p>
+    	<p>众所周知，茴字有四种写法,C语言中的条件控制比茴字的写法更多一种。<br>
+这里分为三类：普通类，？：运算符，短路类。<br>
+##普通类<br>
+if和switch<br>
+易用性：★★★★<br>
+抽象性：★</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">if(i==5)&#123;</span><br><span class="line">    printf(&quot;if condition\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">switch(i)&#123;</span><br><span class="line">    case 5:printf(&quot;switch condition\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>OUTPUT</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if condition</span><br><span class="line">switch condition</span><br></pre></td></tr></table></figure>
+<p>##?:运算符<br>
+易用性：★★★★★<br>
+抽象性：★★★</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">i==5?printf(&quot;:? condition\n&quot;):1;</span><br></pre></td></tr></table></figure>
+<p>OUTPUT</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:? condition</span><br></pre></td></tr></table></figure>
+<p>##短路类<br>
+易用性：★★★<br>
+抽象性：★★★★★</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">i==5 &amp;&amp; (printf(&quot;&amp;&amp; condition\n&quot;),1);</span><br><span class="line">i==4 || (printf(&quot;|| condition\n&quot;),0);</span><br></pre></td></tr></table></figure>
+<p>OUTPUT</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; condition</span><br><span class="line">|| condition</span><br></pre></td></tr></table></figure>
+<p>抽象程度实属有两个孙笑川</p>
 
   	</div>
 	  
@@ -184,13 +195,9 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2019/11/09/4condition/" rel="prev"  title="条件控制的④种写法">
-						条件控制的④种写法 
-					</a></span>
 				
-				
-					<span class="art-item-right">next：<a href="/2019/09/25/strang-code2/" rel="next"  title="程设写迷惑代码第二周">
-						程设写迷惑代码第二周
+					<span class="art-item-right">next：<a href="/2019/10/12/web-hw5/" rel="next"  title="web_hw5">
+						web_hw5
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>
@@ -221,7 +228,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'web_hw5',
+		title: '条件控制的④种写法',
 		tools: true
 	}
 </script>
@@ -329,7 +336,7 @@
 <script>
   var disqus_shortname = 'true';
   
-  var disqus_url = 'http://keyin.me/2019/10/12/web-hw5/';
+  var disqus_url = 'http://keyin.me/2019/11/09/4condition/';
   
   (function(){
     var dsq = document.createElement('script');

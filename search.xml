@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>条件控制的④种写法</title>
+      <link href="/2019/11/09/4condition/"/>
+      <url>/2019/11/09/4condition/</url>
+      
+        <content type="html"><![CDATA[<p>众所周知，茴字有四种写法,C语言中的条件控制比茴字的写法更多一种。<br>这里分为三类：普通类，？：运算符，短路类。<br>##普通类<br>if和switch<br>易用性：★★★★<br>抽象性：★</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">if(i==5)&#123;</span><br><span class="line">    printf(&quot;if condition\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">switch(i)&#123;</span><br><span class="line">    case 5:printf(&quot;switch condition\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>OUTPUT</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if condition</span><br><span class="line">switch condition</span><br></pre></td></tr></table></figure><p>##?:运算符<br>易用性：★★★★★<br>抽象性：★★★</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">i==5?printf(&quot;:? condition\n&quot;):1;</span><br></pre></td></tr></table></figure><p>OUTPUT</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:? condition</span><br></pre></td></tr></table></figure><p>##短路类<br>易用性：★★★<br>抽象性：★★★★★</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">i==5 &amp;&amp; (printf(&quot;&amp;&amp; condition\n&quot;),1);</span><br><span class="line">i==4 || (printf(&quot;|| condition\n&quot;),0);</span><br></pre></td></tr></table></figure><p>OUTPUT</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; condition</span><br><span class="line">|| condition</span><br></pre></td></tr></table></figure><p>抽象程度实属有两个孙笑川</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>web_hw5</title>
       <link href="/2019/10/12/web-hw5/"/>
       <url>/2019/10/12/web-hw5/</url>

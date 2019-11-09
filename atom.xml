@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-10-12T08:08:53.521Z</updated>
+  <updated>2019-11-09T09:13:48.703Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>条件控制的④种写法</title>
+    <link href="http://keyin.me/2019/11/09/4condition/"/>
+    <id>http://keyin.me/2019/11/09/4condition/</id>
+    <published>2019-11-09T08:37:27.000Z</published>
+    <updated>2019-11-09T09:13:48.703Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;众所周知，茴字有四种写法,C语言中的条件控制比茴字的写法更多一种。&lt;br&gt;
+这里分为三类：普通类，？：运算符，短路类。&lt;br&gt;
+##普通类&lt;br&gt;
+if和switch&lt;br&gt;
+易用性：★★★★&lt;br&gt;
+抽象性：★&lt;/p&gt;
+&lt;figure class=&quot;highlight p
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>web_hw5</title>
