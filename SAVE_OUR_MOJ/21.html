@@ -1,0 +1,37 @@
+
+    <!doctype html>
+        <html>
+        <head>
+        <meta charset="utf-8"/>
+        <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <style>
+        body {
+            text-align: left;
+            width: 60%;
+            margin: auto;
+        }
+        </style>
+        <title>Problem  21</title>
+        </head>
+        </html>
+    
+        <body>
+        <h1>Problem  21</h1>
+        <div id="description"></div>
+        <div>你的提交</div>
+    <div id='code0'></div>
+<div id='code_grade0'></div>
+<div id='code1'></div>
+<div id='code_grade1'></div>
+
+    <script>
+    window.onload=function(){
+    $('#code0')[0].innerHTML='<pre><code>#include&lt;stdio.h&gt;\n#include&lt;string.h&gt;\nint main(){\nchar s[100];\nchar b[100];\nint t=0;\nwhile(t!=EOF){\n    t=scanf("%s",s);\n    scanf("%s",b);\n    if(t!=EOF){\n        int lens=strlen(s);\n        int lenb=strlen(b);\n        int co=0;\n        int flag=1;\n        for(int i=0;i&lt;lenb;i++){\n            if(s[co]==b[i]){\n                co++;\n            }\n            if(co==lens){\n                flag=0;\n                printf("Yes\\n");\n                break;\n            }\n        }\n        if(flag){\n                printf("No\\n");\n        }\n    }\n}\nreturn 0;\n}\n </pre></code>';
+$('#code_grade0')[0].innerHTML= '你该代码的得分：100';
+$('#code1')[0].innerHTML='<pre><code>#include&lt;stdio.h&gt;\n#include&lt;string.h&gt;\nint main(){\nchar s[100];\nchar b[100];\nint t=0;\nwhile(t!=EOF){\n    t=scanf("%s",s);\n    scanf("%s",b);\n    if(t!=EOF){\n        int lens=strlen(s);\n        int lenb=strlen(b);\n        int co=0;\n        int flag=1;\n        for(int i=0;i&lt;lenb;i++){\n            if(s[co]==b[i]){\n                co++;\n            }\n            if(co==lens-1){\n                flag=0;\n                printf("Yes\\n");\n                break;\n            }\n        }\n        if(flag){\n                printf("No\\n");\n        }\n    }\n}\nreturn 0;\n}\n </pre></code>';
+$('#code_grade1')[0].innerHTML= '你该代码的得分：90';
+$('#description')[0].innerHTML= marked('## Description ##\n字符串s称为字符串t的子串，若从t中删去部分字符后，剩下的字符连接起来与s相同。给定两个字符串s，t，判断s是否为t的子串。\n## Input ##\n输入包含若干行，每行包含两个字符串s，t，以空格分隔，字符串长度不大于100。以EOF结束。\n## Output ##\n对于每一行输入，若s为t子串输出Yes，否则输出No。\n## Sample Input ##\n```\nsequence subsequence\nperson compression\nVERDI vivaVittorioEmanueleReDiItalia\ncaseDoesMatter CaseDoesMatter\n```\n## Sample Output ##\n```\nYes\nNo\nYes\nNo\n```');
+}
+</script></body>
+</html>
