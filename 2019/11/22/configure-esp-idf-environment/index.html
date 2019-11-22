@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Avarpow</title>
+  <title>配置esp-idf开发环境 | Avarpow</title>
   <meta name="description" content="A blog of Avarpow">
   <meta name="keywords" content="blog,stkevintan,IT,Web Front End,Avarpow,kevinsfork">
   <meta name="HandheldFriendly" content="True">
@@ -15,17 +15,18 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="Avarpow">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A blog of Avarpow">
-<meta name="keywords" content="blog,stkevintan,IT,Web Front End,Avarpow,kevinsfork">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Avarpow">
-<meta property="og:url" content="http://keyin.me/index.html">
+  <meta name="description" content="最近入手ESP-32CAM，自带程序是网络摄像头，图片获取速度平均1.3s一帧，图片流获取速度一秒5帧左右，而且这1帧是所有请求共享的。。。 好吧，看在RMB50还自带摄像头的份子上也还不错了。 接下来，如果想要对它改写程序必须配置esp32-idf的环境。 当时什么都看，直接clone了master分支，master分支是v4.1的开发版本，为后来的的配环境的困难埋下隐患。 先根据官方的入门文档">
+<meta name="keywords" content="esp32">
+<meta property="og:type" content="article">
+<meta property="og:title" content="配置esp-idf开发环境">
+<meta property="og:url" content="http://keyin.me/2019/11/22/configure-esp-idf-environment/index.html">
 <meta property="og:site_name" content="Avarpow">
-<meta property="og:description" content="A blog of Avarpow">
+<meta property="og:description" content="最近入手ESP-32CAM，自带程序是网络摄像头，图片获取速度平均1.3s一帧，图片流获取速度一秒5帧左右，而且这1帧是所有请求共享的。。。 好吧，看在RMB50还自带摄像头的份子上也还不错了。 接下来，如果想要对它改写程序必须配置esp32-idf的环境。 当时什么都看，直接clone了master分支，master分支是v4.1的开发版本，为后来的的配环境的困难埋下隐患。 先根据官方的入门文档">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-22T06:20:30.365Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Avarpow">
-<meta name="twitter:description" content="A blog of Avarpow">
+<meta name="twitter:title" content="配置esp-idf开发环境">
+<meta name="twitter:description" content="最近入手ESP-32CAM，自带程序是网络摄像头，图片获取速度平均1.3s一帧，图片流获取速度一秒5帧左右，而且这1帧是所有请求共享的。。。 好吧，看在RMB50还自带摄像头的份子上也还不错了。 接下来，如果想要对它改写程序必须配置esp32-idf的环境。 当时什么都看，直接clone了master分支，master分支是v4.1的开发版本，为后来的的配环境的困难埋下隐患。 先根据官方的入门文档">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -126,28 +127,36 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-<section class="post-list">
-	
-    <div class='post-wrapper'>
-      
-<article class="post reveal">
+        <article id="post-configure-esp-idf-environment"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/11/22/configure-esp-idf-environment/">
-        配置esp-idf开发环境
-      </a>
-    </h2>
-    
-    <time>
-      11月 22, 2019
-    </time>
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2019/11/22/configure-esp-idf-environment/">
+    	配置esp-idf开发环境
+    </a>
+  </h2>
+	<time>
+	  11月 22, 2019	
+	  
+        <!-- 不算子 -->
+        <span id="busuanzi_container_page_pv" style='display:none' >
+              <i class="icon-smile icon"></i>&nbsp&nbsp&nbsp&nbsp阅读量：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 		
-  </section>
-  <section class="article typo">
-	  <p>最近入手ESP-32CAM，自带程序是网络摄像头，图片获取速度平均1.3s一帧，图片流获取速度一秒5帧左右，而且这1帧是所有请求共享的。。。<br>
+	</time>
+	
+
+	</section>
+	
+		<section class="toc-wrapper"></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>最近入手ESP-32CAM，自带程序是网络摄像头，图片获取速度平均1.3s一帧，图片流获取速度一秒5帧左右，而且这1帧是所有请求共享的。。。<br>
 好吧，看在RMB50还自带摄像头的份子上也还不错了。<br>
 接下来，如果想要对它改写程序必须配置esp32-idf的环境。<br>
 当时什么都看，直接clone了master分支，master分支是v4.1的开发版本，为后来的的配环境的困难埋下隐患。<br>
@@ -247,205 +256,55 @@ git clone <a href="https://github.com/kmackay/micro-ecc.git" target="_blank" rel
 <p>发现是当初删除micro-ecc文件夹时候，将CmakeList也一起删除了，从回收站里找回之后再<figure class="highlight plain"><figcaption><span>build```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">成功build hello_world项目</span><br><span class="line">成功信息如下</span><br><span class="line">```Executing action: all (aliases: build)</span><br><span class="line">Running ninja in directory c:\users\8192\desktop\feibiao\esp-idf\hello_world\build</span><br><span class="line">Executing &quot;ninja all&quot;...</span><br><span class="line">[116/445] Performing configure step for &apos;bootloader&apos;</span><br><span class="line">-- Project version: v4.1-dev-1086-g93a8603c5</span><br><span class="line">-- Building ESP-IDF components for target esp32</span><br><span class="line">-- Adding linker script C:/Users/8192/Desktop/feibiao/esp-idf/components/esp32/ld/esp32.peripherals.ld</span><br><span class="line">-- Adding linker script C:/Users/8192/Desktop/feibiao/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld</span><br><span class="line">-- Adding linker script C:/Users/8192/Desktop/feibiao/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld</span><br><span class="line">-- Adding linker script C:/Users/8192/Desktop/feibiao/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld</span><br><span class="line">-- Adding linker script C:/Users/8192/Desktop/feibiao/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.ld</span><br><span class="line">-- Adding linker script C:/Users/8192/Desktop/feibiao/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.rom.ld</span><br><span class="line">-- Components: bootloader bootloader_support efuse esp32 esp_common esp_rom esptool_py freertos log main micro-ecc partition_table soc spi_flash xtensa</span><br><span class="line">-- Component paths: C:/Users/8192/Desktop/feibiao/esp-idf/components/bootloader C:/Users/8192/Desktop/feibiao/esp-idf/components/bootloader_support C:/Users/8192/Desktop/feibiao/esp-idf/components/efuse C:/Users/8192/Desktop/feibiao/esp-idf/components/esp32 C:/Users/8192/Desktop/feibiao/esp-idf/components/esp_common C:/Users/8192/Desktop/feibiao/esp-idf/components/esp_rom C:/Users/8192/Desktop/feibiao/esp-idf/components/esptool_py C:/Users/8192/Desktop/feibiao/esp-idf/components/freertos C:/Users/8192/Desktop/feibiao/esp-idf/components/log C:/Users/8192/Desktop/feibiao/esp-idf/components/bootloader/subproject/main C:/Users/8192/Desktop/feibiao/esp-idf/components/bootloader/subproject/components/micro-ecc C:/Users/8192/Desktop/feibiao/esp-idf/components/partition_table C:/Users/8192/Desktop/feibiao/esp-idf/components/soc C:/Users/8192/Desktop/feibiao/esp-idf/components/spi_flash C:/Users/8192/Desktop/feibiao/esp-idf/components/xtensa</span><br><span class="line">-- Configuring done</span><br><span class="line">-- Generating done</span><br><span class="line">-- Build files have been written to: C:/Users/8192/Desktop/feibiao/esp-idf/hello_world/build/bootloader</span><br><span class="line">[157/445] Performing build step for &apos;bootloader&apos;</span><br><span class="line">[1/65] Generating project_elf_src.c</span><br><span class="line">[2/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/cpu_util.c.obj</span><br><span class="line">[3/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.obj</span><br><span class="line">[4/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_clk_init.c.obj</span><br><span class="line">[5/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_init.c.obj</span><br><span class="line">[6/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_clk.c.obj</span><br><span class="line">[7/65] Building C object CMakeFiles/bootloader.elf.dir/project_elf_src.c.obj</span><br><span class="line">[8/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_periph.c.obj</span><br><span class="line">[9/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_time.c.obj</span><br><span class="line">[10/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_sleep.c.obj</span><br><span class="line">[11/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdmmc_periph.c.obj</span><br><span class="line">[12/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_pm.c.obj</span><br><span class="line">[13/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/soc_memory_layout.c.obj</span><br><span class="line">[14/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2s_periph.c.obj</span><br><span class="line">[15/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_wdt.c.obj</span><br><span class="line">[16/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/src/memory_layout_utils.c.obj</span><br><span class="line">[17/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.obj</span><br><span class="line">[18/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/ledc_periph.c.obj</span><br><span class="line">[19/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/interrupts.c.obj</span><br><span class="line">[20/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/src/lldesc.c.obj</span><br><span class="line">[21/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal_iram.c.obj</span><br><span class="line">[22/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal.c.obj</span><br><span class="line">[23/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/spi_periph.c.obj</span><br><span class="line">[24/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal.c.obj</span><br><span class="line">[25/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/src/soc_include_legacy_warn.c.obj</span><br><span class="line">C:/Users/8192/Desktop/feibiao/esp-idf/components/soc/src/soc_include_legacy_warn.c:4:2: warning: #warning Legacy including is enabled. This will be deprecated in the future. You can disable this option in the menuconfig. If there are some including errors, please try to include: &quot;soc/soc.h&quot;, &quot;soc/soc_memory_layout.h&quot;, &quot;driver/gpio.h&quot;, or &quot;esp_sleep.h&quot;. [-Wcpp]</span><br><span class="line"> #warning Legacy including is enabled. This will be deprecated in the future. You can disable this option in the menuconfig. If there are some including errors, please try to include: &quot;soc/soc.h&quot;, &quot;soc/soc_memory_layout.h&quot;, &quot;driver/gpio.h&quot;, or &quot;esp_sleep.h&quot;.</span><br><span class="line">  ^~~~~~~</span><br><span class="line">[26/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal_iram.c.obj</span><br><span class="line">[27/65] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj</span><br><span class="line">[28/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal_iram.c.obj</span><br><span class="line">[29/65] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal.c.obj</span><br><span class="line">[30/65] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32/esp_efuse_table.c.obj</span><br><span class="line">[31/65] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj</span><br><span class="line">[32/65] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_api.c.obj</span><br><span class="line">[33/65] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_fields.c.obj</span><br><span class="line">[34/65] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj</span><br><span class="line">[35/65] Linking C static library esp-idf\log\liblog.a</span><br><span class="line">[36/65] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_utility.c.obj</span><br><span class="line">[37/65] Building C object esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/micro-ecc/uECC.c.obj</span><br><span class="line">[38/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock.c.obj</span><br><span class="line">[39/65] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj</span><br><span class="line">[40/65] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/esp32/spi_flash_rom_patch.c.obj</span><br><span class="line">[41/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj</span><br><span class="line">[42/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj</span><br><span class="line">[43/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.obj</span><br><span class="line">[44/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj</span><br><span class="line">[45/65] Linking C static library esp-idf\soc\libsoc.a</span><br><span class="line">[46/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj</span><br><span class="line">[47/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj</span><br><span class="line">[48/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.obj</span><br><span class="line">[49/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_esp32.c.obj</span><br><span class="line">[50/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/secure_boot.c.obj</span><br><span class="line">[51/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32.c.obj</span><br><span class="line">[52/65] Linking C static library esp-idf\micro-ecc\libmicro-ecc.a</span><br><span class="line">[53/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config_esp32.c.obj</span><br><span class="line">[54/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_sha.c.obj</span><br><span class="line">[55/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/flash_encrypt.c.obj</span><br><span class="line">[56/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj</span><br><span class="line">[57/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj</span><br><span class="line">[58/65] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj</span><br><span class="line">[59/65] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/secure_boot_signatures.c.obj</span><br><span class="line">[60/65] Linking C static library esp-idf\bootloader_support\libbootloader_support.a</span><br><span class="line">[61/65] Linking C static library esp-idf\efuse\libefuse.a</span><br><span class="line">[62/65] Linking C static library esp-idf\spi_flash\libspi_flash.a</span><br><span class="line">[63/65] Linking C static library esp-idf\main\libmain.a</span><br><span class="line">[64/65] Linking C executable bootloader.elf</span><br><span class="line">[65/65] Generating binary image from built executable</span><br><span class="line">esptool.py v2.9-dev</span><br><span class="line">Generated C:/Users/8192/Desktop/feibiao/esp-idf/hello_world/build/bootloader/bootloader.bin</span><br><span class="line">[445/445] Generating binary image from built executable</span><br><span class="line">esptool.py v2.9-dev</span><br><span class="line">Generated C:/Users/8192/Desktop/feibiao/esp-idf/hello_world/build/hello-world.bin</span><br><span class="line"></span><br><span class="line">Project build complete. To flash, run this command:</span><br><span class="line">C:\Users\8192\.espressif\python_env\idf4.1_py3.6_env\Scripts\python.exe ..\components\esptool_py\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size detect --flash_freq 40m 0x1000 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\hello-world.bin</span><br><span class="line">or run &apos;idf.py -p (PORT) flash&apos;</span><br></pre></td></tr></table></figure></p>
 <p>由于暂时还不想把板子里面的摄像头程序给覆盖掉，所以没有烧录程序。环境配置应该差不多了，主要是被git的submodule坑了一把</p>
 
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
         <a href="/tags/esp32/">esp32</a>
       
 	  </div>
     
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      
-<article class="post reveal">
-
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/11/09/4condition/">
-        条件控制的④种写法
-      </a>
-    </h2>
-    
-    <time>
-      11月 9, 2019
-    </time>
 		
-  </section>
-  <section class="article typo">
-	  <p>众所周知，茴字有四种写法,C语言中的条件控制比茴字的写法更多一种。<br>
-这里分为三类：普通类，？：运算符，短路类。<br>
-##普通类<br>
-if和switch<br>
-易用性：★★★★<br>
-抽象性：★</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">if(i==5)&#123;</span><br><span class="line">    printf(&quot;if condition\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">switch(i)&#123;</span><br><span class="line">    case 5:printf(&quot;switch condition\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>OUTPUT</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if condition</span><br><span class="line">switch condition</span><br></pre></td></tr></table></figure>
-<p>##?:运算符<br>
-易用性：★★★★★<br>
-抽象性：★★★</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">i==5?printf(&quot;:? condition\n&quot;):1;</span><br></pre></td></tr></table></figure>
-<p>OUTPUT</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:? condition</span><br></pre></td></tr></table></figure>
-<p>##短路类<br>
-易用性：★★★<br>
-抽象性：★★★★★</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int i=5;</span><br><span class="line">i==5 &amp;&amp; (printf(&quot;&amp;&amp; condition\n&quot;),1);</span><br><span class="line">i==4 || (printf(&quot;|| condition\n&quot;),0);</span><br></pre></td></tr></table></figure>
-<p>OUTPUT</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; condition</span><br><span class="line">|| condition</span><br></pre></td></tr></table></figure>
-<p>抽象程度实属有两个孙笑川</p>
+	
+		<div class="art-item-footer">
+				
+				
+					<span class="art-item-right">next：<a href="/2019/11/09/4condition/" rel="next"  title="条件控制的④种写法">
+						条件控制的④种写法
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+	
+    <script>
+        var gitalk = new Gitalk({
+              clientID: 'e7b01d41dae83ed9d254',
+              clientSecret: 'bfa77b991f3025bba9bcee985439c05561381e10',
+              repo: 'avarpow.github.io',
+              owner: 'avarpow',
+              admin: 'avarpow',
+              id: (location.pathname).split("/").pop().substring(0, 49),      // Ensure uniqueness and length less than 50{{ page.title }}
+              distractionFreeMode: true  // Facebook-like distraction free mode
+            })
+            gitalk.render('disqus_thread')
+    </script>
+   
+	
+		<section id="comments">
+			<div id="disqus_thread"></div>
+		</section>
+	
 
 
-    
-    
-    
-  </section>
 </article>
-    </div>
-  
-    <div class='post-wrapper'>
-      
-<article class="post reveal">
-
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/10/12/web-hw5/">
-        web_hw5
-      </a>
-    </h2>
-    
-    <time>
-      10月 12, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>作业要求</p>
-<img src="/2019/10/12/web-hw5/calculator.jpg" title="code">
-<p><a href="/Calculator/">-&gt;最终效果&lt;-</a><br>
-三个小时打完作业，然而出现谜之bug：<br>
-如果在使用键盘enter键得出答案之前采用鼠标点击过按钮，则按enter键后会在运算式中重复输入最后一个字符<br>
-后发现是焦点问题使用enter相当于触发一次焦点上的按钮。<br>
-在键盘点击后加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&apos;equal&apos;).focus();</span><br></pre></td></tr></table></figure>
-<p>在enter时候将焦点设置为equal键上解决</p>
-
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      
-<article class="post reveal">
-
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/09/25/strang-code2/">
-        程设写迷惑代码第二周
-      </a>
-    </h2>
-    
-    <time>
-      9月 25, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>第二周又来写迷惑代码啦</p>
-<img src="/2019/09/25/strang-code2/code.png" title="code">
-<p>一行迷惑的不能再迷惑的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int y,m,md=0,temp,flag=0;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;y,&amp;m);</span><br><span class="line">    (y&gt;=0&amp;&amp;y&lt;=9999&amp;&amp;m&gt;=1&amp;&amp;m&lt;=12)?printf(&quot;%04d/%02d has %d days.\n&quot;,y,m,m==2?((y%100==0?(y%400==0?1:0):(y%4==0?1:0))==1?29:28):((m*2-15)&gt;0?(m*2-15):(15-m*2))%4==1?31:30):printf(&quot;Invalid Input Detected.\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<img src="/2019/09/25/strang-code2/code2.jpg" title="code2">
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    char c;</span><br><span class="line">    scanf(&quot;%c&quot;, &amp;c);</span><br><span class="line">    printf(&quot;%c\n&quot;, c - &apos;A&apos; + &apos;a&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<img src="/2019/09/25/strang-code2/code3.jpg" title="code3">
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int num1, num2;</span><br><span class="line">    scanf(&quot;%d%d&quot;, &amp;num1, &amp;num2);</span><br><span class="line">    printf(&quot;%d\n&quot;,num1%num2==0?num1+num2:num1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<img src="/2019/09/25/strang-code2/code4.jpg" title="code4">
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n, flag = 0;</span><br><span class="line">    scanf(&quot;%d&quot;, &amp;n);</span><br><span class="line">    printf(&quot;%d is%s a leap year.\n&quot;, n, (n % 100==0 ? (n % 400==0 ? 1 : 0 ): (n % 4==0 ? 1 : 0)) ? &quot;&quot; : &quot; not&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>啊，你说社么if？不存在的:不存在的;</p>
-
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      
-<article class="post reveal">
-
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/09/18/程设写迷惑代码第一天/">
-        程设写迷惑代码第一天
-      </a>
-    </h2>
-    
-    <time>
-      9月 18, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>突然找到了写毒瘤代码的快感XDDDD:</p>
-<h2 id="descrption"><a class="markdownIt-Anchor" href="#descrption"></a> Descrption</h2>
-<p>输出 hello, world</p>
-<p>别忘了换行哦 <sup>_</sup></p>
-<h2 id="毒瘤代码一"><a class="markdownIt-Anchor" href="#毒瘤代码一"></a> 毒瘤代码一</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">    char s[13];</span><br><span class="line">    for(int i=0;i&lt;13;i++)&#123;</span><br><span class="line">        if(i==0)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;104)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==1)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;101)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==2)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;108)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==3)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;108)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==4)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;111)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==5)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;44)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==6)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;32)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==7)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;119)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==8)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;111)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==9)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;114)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==10)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;108)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==11)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;100)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==12)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;&apos;\n&apos;)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==13)&#123;</span><br><span class="line">            int j=0;</span><br><span class="line">            while(j&lt;0)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            s[i]=j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%s&quot;,s);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然而并没有逃过matrix的法眼</p>
-<img src="/2019/09/18/程设写迷惑代码第一天/2222.jpg" title="duliu1">
-<h2 id="description"><a class="markdownIt-Anchor" href="#description"></a> Description</h2>
-<p>计算两个整数a，b的和，整数范围为-1000&lt;a,b&lt;1000。</p>
-<h2 id="毒瘤代码二"><a class="markdownIt-Anchor" href="#毒瘤代码二"></a> 毒瘤代码二</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int a,b;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;a);</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;b);</span><br><span class="line">    printf(&quot;%d\n&quot;,a^a^a^a^a^a^a^a^a-a-a-a-a+a+a+a+a+b^b^b^b^b-b-b-b-b+b+b+b+b);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="description-2"><a class="markdownIt-Anchor" href="#description-2"></a> Description</h2>
-<p>In one week an employee works h hours (h is an integer and 0&lt;h&lt;168) at the hourly pay rate of 24.75 dollar. Assume a 40.0 hour normal work week and an overtime pay rate factor of 1.5.</p>
-<p>What are the employee’s wages?</p>
-<h2 id="毒瘤代码三"><a class="markdownIt-Anchor" href="#毒瘤代码三"></a> 毒瘤代码三</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int hours=0;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;hours);</span><br><span class="line">    printf(&quot;%.2f\n&quot;, 24.75 * hours + (hours &gt; 40 ? 0.5f*24.75*(hours-40):0.0));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="description-3"><a class="markdownIt-Anchor" href="#description-3"></a> Description</h2>
-<p>Write a program that reads in the radius and length of a cylinder and computes volume using the following formulas: area = radius * radius * PI volume = area * length PI = 3.14159</p>
-<h2 id="毒瘤代码四"><a class="markdownIt-Anchor" href="#毒瘤代码四"></a> 毒瘤代码四</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">    double pi = 2,now=2.0/3,r,l;</span><br><span class="line">    scanf(&quot;%lf%lf&quot;,&amp;r,&amp;l);</span><br><span class="line">    for (int i = 1; i &lt; 30;pi = pi + now,now = now * (i + 1) / ((2 * (i + 1)) + 1),i++);</span><br><span class="line">    printf(&quot;%.4lf&quot;,pi*r*r*l);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>照这样写代码被打死可不要怪我。</p>
-
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-</section>
-
-
-  <nav id="page-nav">
-    
-    
-    <a class="next" rel="next" href="/page/2/">
-      <span class="text">Next</span>
-      <span class="icon icon-chevron-right"></span>
-    </a>
-    
-  </nav>
-  
+<script>
+	window.subData = {
+		title: '配置esp-idf开发环境',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
@@ -538,11 +397,13 @@ if和switch<br>
 <script>
   var disqus_shortname = 'true';
   
+  var disqus_url = 'http://keyin.me/2019/11/22/configure-esp-idf-environment/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

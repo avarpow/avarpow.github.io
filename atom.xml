@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://keyin.me/"/>
-  <updated>2019-11-09T09:13:48.703Z</updated>
+  <updated>2019-11-22T06:20:30.365Z</updated>
   <id>http://keyin.me/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>配置esp-idf开发环境</title>
+    <link href="http://keyin.me/2019/11/22/configure-esp-idf-environment/"/>
+    <id>http://keyin.me/2019/11/22/configure-esp-idf-environment/</id>
+    <published>2019-11-22T05:16:57.000Z</published>
+    <updated>2019-11-22T06:20:30.365Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近入手ESP-32CAM，自带程序是网络摄像头，图片获取速度平均1.3s一帧，图片流获取速度一秒5帧左右，而且这1帧是所有请求共享的。。。&lt;br&gt;
+好吧，看在RMB50还自带摄像头的份子上也还不错了。&lt;br&gt;
+接下来，如果想要对它改写程序必须配置esp32-idf的环境。
+      
+    
+    </summary>
+    
+    
+      <category term="esp32" scheme="http://keyin.me/tags/esp32/"/>
+    
+  </entry>
   
   <entry>
     <title>条件控制的④种写法</title>
